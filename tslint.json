@@ -1,0 +1,14 @@
+{
+  "extends": "tslint:recommended",
+  "defaultSeverity": "warning",
+  "rules": {
+    "only-arrow-functions": true,
+    "semicolon": [
+      true,
+      "never"
+    ],
+    "quotemark": [true, "single"],
+    "no-console": false,
+    "eofline": false
+  }
+}
