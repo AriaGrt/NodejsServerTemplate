@@ -3,8 +3,9 @@ FROM node:latest
 WORKDIR app
 
 ADD package.json .
-ADD tsconfig.json .
-ADD tslint.json .
+ADD config/tsconfig.json .
+ADD config/tslint.json .
+ADD config/nodemon.config.json .
 
 RUN npm install
 
