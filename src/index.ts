@@ -1,5 +1,6 @@
 import Server from './server'
 
-const server = new Server(3000)
+const env: string = process.env.NODE_ENV || 'dev'
+const server = new Server(env)
 
 server.start()

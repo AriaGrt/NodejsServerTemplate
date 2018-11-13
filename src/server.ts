@@ -5,8 +5,8 @@ export default class Server {
 
     private readonly port: number
 
-    public constructor(port: number) {
-        this.port = port
+    public constructor(env: string) {
+        this.port = env === 'prod' ? 8080 : 3000
     }
 
     public start() {
