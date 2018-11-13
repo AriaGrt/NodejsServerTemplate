@@ -1,0 +1,12 @@
+FROM node:latest
+
+WORKDIR mmorpg_server
+
+ADD package.json .
+
+RUN npm install
+
+RUN npm install -g nodemon
+
+RUN mkdir config
+RUN mkdir src

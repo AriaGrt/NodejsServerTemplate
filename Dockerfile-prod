@@ -1,0 +1,11 @@
+FROM node:latest
+
+WORKDIR mmorpg_server
+
+ADD package.json .
+
+RUN npm install
+
+RUN mkdir app
+
+ADD app/dist /app

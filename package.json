@@ -4,8 +4,8 @@
   "description": "NodeJS Server using TypeScript and ES6",
   "main": "src/server.ts",
   "scripts": {
-    "start": "cd src/ && node server.js",
-    "dev": "concurrently -k -n \"Typescript, Node\" -p \"[{name}]\" -c \"blue, green\" \"tsc --watch\" \"nodemon -L dist/index.js --config nodemon.config.json\"",
+    "start": "cd app/ && node server.js",
+    "dev": "tsc --project ./config/tsconfig.json && concurrently -k -n \"Typescript, Node\" -p \"[{name}]\" -c \"blue, green\" \"tsc --project ./config/tsconfig.json --watch\" \"nodemon -L dist/index.js --config ./config/nodemon.config.json\"",
     "lint": "./node_modules/.bin/tslint src/* || true"
   },
   "author": "",

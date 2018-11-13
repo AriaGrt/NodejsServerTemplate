@@ -1,0 +1,11 @@
+version: '3'
+services:
+  nodejs_server:
+    build:
+      context: .
+      dockerfile: Dockerfile-prod
+    image: mmorpg_nodejs_server_prod
+    ports:
+    - 8080:8080
+    command: npm run start
+    container_name: server_prod

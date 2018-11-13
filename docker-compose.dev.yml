@@ -1,0 +1,14 @@
+version: '3'
+services:
+  nodejs_server:
+    build:
+      context: .
+      dockerfile: Dockerfile-dev
+    image: mmorpg_nodejs_server_dev
+    volumes:
+      - ./config:/mmorpg_server/config
+      - ./src:/mmorpg_server/src
+    ports:
+      - 3000:3000
+    command: npm run dev
+    container_name: server_dev
